@@ -9,7 +9,7 @@ class SearchResultsPageClass(BasePageClass):
 
     def click_on_nth_item(self, n: int = 1):
         foundElements = self.find.custom_find_elements(self.locators.foundItemsLocator)
-        foundItemElement = foundElements[n]
+        foundItemElement = foundElements[n//2 + n]
         foundItemElement.click()
 
 
