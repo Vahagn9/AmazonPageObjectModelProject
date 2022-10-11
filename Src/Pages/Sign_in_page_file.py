@@ -10,7 +10,7 @@ class SignInPageClass(BasePageClass):
         super().__init__(driver)
         self.locators = SignInPageLocatorsClass()
 
-    def fill_username_filed(self, username=VariablesClass.get_username()):
+    def fill_username_field(self, username=VariablesClass.get_username()):
         userNameTextBoxElement = self.find.custom_find_element(self.locators.userNameTextFiledLocator)
         userNameTextBoxElement.send_keys(username)
 
@@ -18,7 +18,7 @@ class SignInPageClass(BasePageClass):
         continueButtonElement = self.find.custom_find_element(self.locators.continueButtonLocator)
         continueButtonElement.click()
 
-    def fill_password_filed(self, password=VariablesClass.get_password()):
+    def fill_password_field(self, password=VariablesClass.get_password()):
         userNameTextBoxElement = self.find.custom_find_element(self.locators.passwordTextFiledLocator)
         userNameTextBoxElement.send_keys(password)
 
@@ -37,11 +37,11 @@ class SignInPageClass(BasePageClass):
         """
         self.driver.get(VariablesClass.amazonSignInUrl)
         # username
-        self.fill_username_filed(username)
+        self.fill_username_field(username)
         time.sleep(2)  # added to not get robot check
         self.click_on_continue_button()
         # password
-        self.fill_password_filed(password)
+        self.fill_password_field(password)
         time.sleep(2)  # added to not get robot check
         self.click_on_sign_in_button()
 

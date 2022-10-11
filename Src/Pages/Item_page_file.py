@@ -12,7 +12,7 @@ class ItemPageClass(BasePageClass):
         addToCartButtonElement.click()
 
     def add_to_cart(self):
-        """add cart if it is possible else will go to previous page"""
+        """add to cart if it is possible else will go to previous page"""
         try:
             self.click_on_add_to_cart_button()
             return True

@@ -18,5 +18,4 @@ class SearchFunctionalityClass(BaseTestClass):
         time.sleep(self.sleep_time)  # added for visibility
 
     def tearDown(self):
-        # self.cartPageObj.remove_all_elements_from_cart()
         self.driver.close()
